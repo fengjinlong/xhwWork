@@ -1,6 +1,89 @@
-div {
-  border: 1px solid #f00;
+.main {
+  width: 1200px;
+  margin: 20px auto 0;
+  background: #fff;
+  position: relative;
 }
-div a {
-  color: #000;
+.main .i {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main .title {
+  color: #999;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px 40px;
+}
+.main .choose {
+  overflow: hidden;
+  padding-left: 40px;
+  padding-top: 25px;
+}
+.main .choose div {
+  float: left;
+  margin-right: 30px;
+}
+.main .choose div span {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  background: url("../images/btn_nor_person.png");
+  background-size: 100% 100%;
+}
+.main .choose div.active span {
+  background: url("../images/btn_sel_person.png");
+}
+.main .reason textarea {
+  margin: 40px;
+  width: 88%;
+  height: 240px;
+  border: 1px solid #333;
+  padding: 30px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+}
+.main .upload {
+  background: #fff;
+  overflow: hidden;
+  padding-right: 40px;
+}
+.main .upload button {
+  background: #fff;
+  float: right;
+  display: block;
+  margin-top: 20px;
+  width: 140px;
+  height: 42px;
+  border: 1px solid #12ca96;
+  color: #12ca96;
+  border-radius: 21px;
+}
+.main .upload span {
+  padding: 0 20px;
+  margin-top: 20px;
+  float: right;
+  line-height: 42px;
+  font-size: 14px;
+  color: #999;
+}
+.ffoot {
+  width: 1200px;
+  height: 100px;
+  margin: 80px auto 0;
+}
+.ffoot button {
+  border: none;
+  color: #fff;
+  float: right;
+  width: 140px;
+  height: 42px;
+  background: #12ca96;
+  border-radius: 21px;
 }
