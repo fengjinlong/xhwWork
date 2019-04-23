@@ -20,7 +20,7 @@
   float: right;
 }
 .main1 {
-  width: 1160px;
+  width: 1120px;
   padding: 40px;
   line-height: 160px;
   margin: 0px auto;
@@ -39,4 +39,62 @@
   font-family: MicrosoftYaHei;
   font-size: 18px;
   color: #12ca96;
+}
+.recording {
+  width: 1120px;
+  padding: 40px;
+  margin: 0px auto;
+  background: #fff;
+  font-family: MicrosoftYaHei;
+  overflow: hidden;
+}
+.recording .div {
+  border-top: 1px dashed rgba(102,102,102,0.4);
+}
+.recording .div ul li {
+  position: relative;
+  list-style: none;
+  height: 45px;
+}
+.recording .div ul li .div1 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -25px;
+  top: 0;
+}
+.recording .div ul li .div1 span {
+  position: absolute;
+  top: -1px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url("../images/ic_nor_exhibition.png");
+  background-size: 100% 100%;
+}
+.recording .div ul li .div1 div {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  border-left: 1px solid #d8d8d8;
+  width: 1px;
+  height: 22px;
+}
+.recording .div ul li .div2 {
+  color: #999;
+}
+.recording .div ul li .div2 span {
+  padding: 0 30px;
+  font-size: 14px;
+}
+.recording .div ul li.last .div2 {
+  color: #333;
+  font-weight: bold;
+}
+.recording .div ul li.last .div1 span {
+  background: url("../images/ic_pre_exhibition.png");
+  background-size: 100% 100%;
+}
+.recording .div ul li.last .div1 div {
+  display: none;
 }

@@ -1,0 +1,81 @@
+.main {
+  width: 1200px;
+  margin: 20px auto 0;
+  background: #fff;
+  position: relative;
+}
+.main .i {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main .title {
+  color: #999;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 30px 40px 40px;
+}
+.main .div .div1 {
+  width: 1120px;
+  height: 135px;
+  margin: 0 auto;
+  border: 1px solid #333;
+  border-bottom: none;
+}
+.main .div .div1 p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  padding-left: 30px;
+}
+.main .div .div1 p.p1 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.main .div .div1 p.p2 {
+  margin-top: 25px;
+}
+.main .div .div1 p.p3 {
+  margin-top: 10px;
+}
+.main .div table {
+  width: 1122px;
+  margin: 0 auto;
+  border-bottom: 1px solid #333;
+}
+.main .div table tr {
+  height: 66px;
+}
+.main .div table tr td {
+  width: 140px;
+  border-left: 1px solid #333;
+  border-top: 1px solid #333;
+  padding-left: 15px;
+  font-size: 14px;
+}
+.main .div table tr td.right {
+  border-right: 1px solid #333;
+}
+.main .div table tr td.tit {
+  font-size: 18px;
+  font-weight: bold;
+}
+.ffoot {
+  width: 1200px;
+  height: 100px;
+  margin: 80px auto 0;
+}
+.ffoot button {
+  border: none;
+  color: #fff;
+  float: right;
+  width: 140px;
+  height: 42px;
+  background: #12ca96;
+  border-radius: 21px;
+}

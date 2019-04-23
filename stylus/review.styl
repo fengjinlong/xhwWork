@@ -16,7 +16,7 @@
       &.div3
         float right
   .main1
-    width 1160px
+    width 1120px
     padding 40px
     line-height 160px
     margin 0px auto
@@ -32,4 +32,54 @@
       float left
       font-family: MicrosoftYaHei;
       font-size: 18px;
-      color: #12CA96;
+      color: #12CA96
+  .recording
+    width 1120px
+    padding 40px
+    margin 0px auto
+    background: #fff
+    font-family: MicrosoftYaHei;
+    overflow hidden
+    .div
+      border-top 1px dashed #6666
+      ul
+        li
+          position relative
+          list-style none
+          height: 45px
+          .div1
+            width: 30px
+            height 30px
+            position absolute
+            left -25px
+            top 0
+            span
+              position absolute
+              top -1px
+              display: block
+              width: 22px
+              height: 22px
+              background: url('../images/ic_nor_exhibition.png')
+              background-size: 100% 100%
+            div
+              position absolute
+              top 20px
+              left 10px
+              border-left: 1px solid #D8D8D8
+              width: 1px
+              height 22px
+          .div2
+            color #999
+            span
+              padding: 0 30px
+              font-size: 14px
+          &.last
+            .div2
+              color #333
+              font-weight: bold
+            .div1
+              span
+                background: url('../images/ic_pre_exhibition.png')
+                background-size: 100% 100%
+              div
+                display: none
