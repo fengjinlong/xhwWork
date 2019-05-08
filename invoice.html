@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+  <link href="https://cdn.bootcss.com/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/invoice.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="div">
+      <div class="top">
+        <span class="span">工单</span>
+        <span class="span">></span>
+        <span class="span1">发票申请</span>
+      </div>
+      <div class="bottom">
+        <a class="span active" href="javascript:void(0)">普票</a>
+        <a class="span" href="specialTicket.html">专票</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="div">
+      <img src="./images/ic_rec.png" alt="">
+      <div class="tit">课程明细</div>
+      <div class="com com1">
+        <span>产品名称</span>
+        <span>报名时间</span>
+        <span>缴费总额</span>
+      </div>
+      <div class="com">
+        <span>人力资源管理师-一级</span>
+        <span class="span1">2019-05-26 20:20:08</span>
+        <span class="span2">3000</span>
+      </div>
+      <div class="com">
+        <span>人力资源管理师-一级</span>
+        <span class="span1">2019-05-26 20:20:08</span>
+        <span class="span2">3000</span>
+      </div>
+      <div class="footer">
+        <span>元</span>
+        <span class="num">1000</span>
+        <span>共缴费金额：</span>
+      </div>
+    </div>
+
+    <div class="div">
+      <img src="./images/ic_rec.png" alt="">
+      <div class="tit">普票申请表（必填）</div>
+      <table cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="td">申请日期</td>
+          <td colspan="5">2</td>
+        </tr>
+        <tr>
+          <td class="td">可申请金额</td>
+          <td>2</td>
+          <td class="td">已申请金额</td>
+          <td>4</td>
+          <td class="td">申请金额<span>*</span></td>
+          <td class="td1 inputTd"><input class="input" type="text"></td>
+        </tr>
+        <tr>
+          <td class="td">发票抬头<span>*</span></td>
+          <td colspan="5" class="inputTd">
+            <input  class="input2" id="inputModel" autocomplete="off" />
+            <select size="4" class="select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="5">5</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="td">发票明细<span>*</span></td>
+          <td colspan="5">
+            <select id="select">
+              <option value="0" selected = "selected">请选择</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="5">5</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="td">学员姓名<span>*</span></td>
+          <td class="inputTd" colspan="5"><input class="input" type="text"></td>
+        </tr>
+        <tr>
+          <td class="td">学员电话<span>*</span></td>
+          <td class="inputTd" colspan="5"><input class="input" type="text"></td>
+        </tr>
+        <tr>
+          <td class="td">收件信息<span>*</span></td>
+          <td class="inputTd" colspan="5"><input class="input" type="text"></td>
+        </tr>
+        <tr>
+          <td class="td">纳税人识别号<span>*</span></td>
+          <td colspan="5" class="inputTd">
+            <input class="input2" id="inputModel1" autocomplete="off" />
+            <select size="4" class="select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="5">5</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <div class="footer">
+        <button>确认</button>
+      </div>
+      <div class="err">
+          <div class="error"></div>
+          <div class="error2"></div>
+          <div class="error3"></div>
+        </div>
+    </div>
+  </main>
+  <script>
+    var focus = false;
+    $("#inputModel").focus(function () {
+      focus = true;
+      $(this).next().css('display', 'block');
+    }).blur(function () {
+      if (focus) {
+        $(this).next().css('display', 'none');
+      }
+    }).next().mousedown(function () {
+      focus = false;
+    }).change(function () {
+      $(this).css('display', 'none').prev().val(this.value);
+    });
+
+    var focus1 = false;
+    $("#inputModel1").focus(function () {
+      focus1 = true;
+      $(this).next().css('display', 'block');
+    }).blur(function () {
+      if (focus1) {
+        $(this).next().css('display', 'none');
+      }
+    }).next().mousedown(function () {
+      focus1 = false;
+    }).change(function () {
+      $(this).css('display', 'none').prev().val(this.value);
+    });
+
+
+    $('button').click(function () {
+      var arr = $('.input')
+      var arrErr = []
+      arr.each(function (i, $el) {
+        $el.style.width = $el.parentElement.clientWidth - 22 + 'px'
+        if ($el.value == '') {
+          var index = arrErr.indexOf(i)
+          if (index == -1) {
+            arrErr.push(i)
+          }
+          $el.style.border = '1px solid red'
+        } else {
+          var index = arrErr.indexOf(i)
+          if (index != -1) {
+            arrErr.splice(index, 1)
+          }
+          $el.style.border = 'none'
+        }
+      })
+      addDom(arrErr, 1)
+
+      var arr2 = $('.input2')
+      var arrErr2 = []
+      arr2.each(function (i, $el) {
+        $el.style.width = $el.parentElement.clientWidth - 22 + 'px'
+        if ($el.value == '') {
+          var index = arrErr2.indexOf(i)
+          if (index == -1) {
+            arrErr2.push(i)
+          }
+          $el.style.border = '1px solid red'
+        } else {
+          var index = arrErr2.indexOf(i)
+          if (index != -1) {
+            arrErr2.splice(index, 1)
+          }
+          $el.style.border = 'none'
+        }
+      })
+      addDom(arrErr2, 2)
+      
+      if ($('#select').val() == '0') {
+        $('#select').parent().css({
+          'border': '1px solid red'
+        })
+        addDom([0], 3)
+      } else {
+        $('#select').parent().css({
+          'border': 'none',
+          'border-left': '1px solid #333',
+          'border-top': '1px solid #333',
+        })
+        addDom([], 3)
+      }
+      function addDom (arr, type) {
+        $('.error ul').html('')
+        var arr1 = [
+          '填写申请金额',
+          '填写学员姓名',
+          '填写学员电话',
+          '填写收件信息'
+        ]
+        var arr2 = [
+          '发票抬头',
+          '纳税人识别号'
+        ]
+
+        var arr3 = [
+          '选择发票明细'
+        ]
+
+        if (type == 1) {
+          if (arr.length != 0) {
+            var str = ''
+            for (var i = 0; i < arr.length; i++) {
+              str += "<li>" +
+                     "<img src='./images/ic_caution.png'>" +
+                      arr1[arr[i]] + 
+                     "</li>"
+            }
+            $('.err .error').html(str)
+          } else {
+            $('.err .error').html('')
+          }
+        }
+
+        if (type == 2) {
+          if (arr.length != 0) {
+            var str = ''
+            for (var i = 0; i < arr.length; i++) {
+              str += "<li>" +
+                     "<img src='./images/ic_caution.png'>" +
+                      arr2[arr[i]] + 
+                     "</li>"
+            }
+            $('.err .error2').html(str)
+          } else {
+            $('.err .error2').html('')
+          }
+        }
+
+        if (type == 3) {
+          if (arr.length != 0) {
+            var str = ''
+            for (var i = 0; i < arr.length; i++) {
+              str += "<li>" +
+                     "<img src='./images/ic_caution.png'>" +
+                      arr3[arr[i]] + 
+                     "</li>"
+            }
+            $('.err .error3').html(str)
+          } else {
+            $('.err .error3').html('')
+          }
+        }
+      }
+
+      
+    })
+  </script>
+</body>
+
+</html>

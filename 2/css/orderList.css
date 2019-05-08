@@ -1,0 +1,109 @@
+.main {
+  width: 960px;
+  border: 1px solid #f00;
+  background: #fff;
+}
+.main .header {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+}
+.main .header a {
+  float: left;
+  font-size: 14px;
+  color: #999;
+  text-decoration: none;
+  width: 124px;
+  text-align: center;
+}
+.main .header a.a {
+  float: right;
+}
+.main .header a.active {
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #12ca96;
+}
+.main .header a.act {
+  font-size: 16px;
+  color: #333;
+}
+.main .header a.active.aa span {
+  display: block;
+}
+.main .header a.aa {
+  position: relative;
+}
+.main .header a.aa span {
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 5px 5px 0;
+  border-style: solid;
+  border-color: #12ca96 transparent transparent;
+  bottom: -5px;
+  left: 59px;
+}
+.main .first .tit {
+  overflow: hidden;
+  height: 54px;
+  line-height: 54px;
+  background: #f6f6f6;
+  margin-top: 25px;
+}
+.main .first .tit span {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+.main .first .con div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 66px;
+  line-height: 66px;
+}
+.main .first .con div span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #999;
+}
+.main .first .con div span.sty {
+  color: #333;
+}
+.main .first .con div span.red {
+  color: #e1413e;
+}
+.main .first .con div span.sty1 {
+  color: #333;
+}
+.main .first .con div span a {
+  display: block;
+  border: 1px solid #12ca96;
+  width: 92px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 14px;
+  color: #12ca96;
+}

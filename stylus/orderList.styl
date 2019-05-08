@@ -1,0 +1,85 @@
+.main
+  width 960px
+  border: 1px solid red
+  background: #fff
+  .header
+    height 60px
+    line-height: 60px
+    border-bottom: 1px solid #ddd
+    a
+      float left
+      font-size: 14px;
+      color: #999999;
+      text-decoration none
+      width 124px
+      text-align: center
+      &.a
+        float right
+      &.active
+        font-size: 16px;
+        color: #333333;
+        border-bottom: 1px solid #12CA96;
+      &.act
+        font-size: 16px;
+        color: #333333;
+      &.active.aa
+        span
+          display block  
+      &.aa
+        position relative
+        span
+          display none
+          position absolute
+          width:0;
+          height:0;
+          border-width:5px 5px 0;
+          border-style:solid;
+          border-color:#12CA96 transparent transparent
+          bottom -5px
+          left 59px
+  .first
+    .tit
+      overflow hidden 
+      height 54px
+      line-height 54px
+      background: #F6F6F6;
+      margin-top: 25px
+      span
+        float left
+        width: 20%
+        text-align: center
+    .con
+      div
+        display flex
+        height 66px
+        line-height 66px
+        span
+          flex: 1
+          display: flex
+          width: 20%
+          justify-content: center
+          align-items: center
+          overflow: hidden
+          white-space: nowrap
+          text-overflow:ellipsis
+          padding: 0 10px
+          font-size: 14px;
+          color: #999999;
+          &.sty
+            color: #333
+          &.red
+            color: #E1413E;
+          &.sty1
+            color: #333333;
+          a
+            display block
+            border: 1px solid #12CA96;
+            width: 92px
+            height 30px
+            line-height 30px
+            text-align: center
+            border-radius: 15px;
+            text-decoration none
+            font-family: MicrosoftYaHeiUI;
+            font-size: 14px;
+            color: #12CA96;
