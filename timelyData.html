@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+  <link href="https://cdn.bootcss.com/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/timelyData.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="main">
+    <header>
+      <span class="span1">实时销售数据</span>
+      <span class="span">2019年05月21日 上午 08:56:50</span>
+    </header>
+    <div class="chart">
+      <div class="div">
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font">
+            <span class="span1">今日流水</span>
+            <span class="span2">全国总项目时点数据</span>
+          </div>
+          <div class="font">
+            <span class="span3"><span>￥</span>8,888,000</span>
+            <span class="span4">8,888,000</span>
+          </div>
+          <div class="chartcla" id="main" style="width: 482px;height:330px;"></div>
+          <div class="tit">
+            <span class="span1"></span>
+            <span>昨日</span>
+            <span class="span2"></span>
+            <span>今日</span>
+          </div>
+          <div class="name">单位</div>
+        </div>
+
+      </div>
+      <div class="div">
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font">
+            <span class="span1">今日流水</span>
+            <span class="span2">各项目与昨日同时间点业绩差</span>
+          </div>
+          <div class="font">
+            <span class="span3"><span>￥</span>8,888,000</span>
+            <span class="span4">8,888,000</span>
+          </div>
+          <div class="chartcla" id="difference" style="width: 482px;height:330px;"></div>
+
+        </div>
+      </div>
+      <div class="div">
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font">
+            <span class="span1">今日流水</span>
+            <span class="span2">学历项目时点数据</span>
+          </div>
+          <div class="font">
+            <span class="span3"><span>￥</span>8,888,000</span>
+            <span class="span4">8,888,000</span>
+          </div>
+          <div class="chartcla" id="education" style="width: 482px;height:330px;"></div>
+          <div class="tit">
+            <span class="span1"></span>
+            <span>昨日</span>
+            <span class="span2"></span>
+            <span>今日</span>
+          </div>
+          <div class="name">单位</div>
+        </div>
+      </div>
+      <div class="div">
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font">
+            <span class="span1">今日流水</span>
+            <span class="span2">职业资格时点数据</span>
+          </div>
+          <div class="font">
+            <span class="span3"><span>￥</span>8,888,000</span>
+            <span class="span4">8,888,000</span>
+          </div>
+          <div class="chartcla" id="career" style="width: 482px;height:330px;"></div>
+          <div class="tit">
+            <span class="span1"></span>
+            <span>昨日</span>
+            <span class="span2"></span>
+            <span>今日</span>
+          </div>
+          <div class="name">单位</div>
+        </div>
+      </div>
+
+      <!-- table -->
+      <div class="div">
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font">
+            <span class="span1 bold">熊明镜团队业绩</span>
+            <span class="span4">8,888,000</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td width=34%>组名</td>
+                <td width=20%>昨日业绩总额</td>
+                <td width=20%>昨日本时业绩</td>
+                <td width=18%>今日业绩</td>
+                <td width=8%>差额</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td"><span>1</span>郑州超越心理六组郑州超郑州超越组越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>北京敖雄心理一组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+      <div class="div">
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font">
+            <span class="span1 bold">熊明镜团队业绩</span>
+            <span class="span4">8,888,000</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td width=34%>组名</td>
+                <td width=20%>昨日业绩总额</td>
+                <td width=20%>昨日本时业绩</td>
+                <td width=18%>今日业绩</td>
+                <td width=8%>差额</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td"><span>1</span>郑州超越心理六组郑州超郑州超越组越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>北京敖雄心理一组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+      <div class="div">
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font">
+            <span class="span1 bold">熊明镜团队业绩</span>
+            <span class="span4">8,888,000</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td width=34%>组名</td>
+                <td width=20%>昨日业绩总额</td>
+                <td width=20%>昨日本时业绩</td>
+                <td width=18%>今日业绩</td>
+                <td width=8%>差额</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td"><span>1</span>郑州超越心理六组郑州超郑州超越组越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>北京敖雄心理一组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+      <div class="div">
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font">
+            <span class="span1 bold">熊明镜团队业绩</span>
+            <span class="span4">8,888,000</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td width=34%>组名</td>
+                <td width=20%>昨日业绩总额</td>
+                <td width=20%>昨日本时业绩</td>
+                <td width=18%>今日业绩</td>
+                <td width=8%>差额</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td"><span>1</span>郑州超越心理六组郑州超郑州超越组越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>北京敖雄心理一组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+              <tr>
+                <td class="td"><span>1</span>郑州超越越心理六组</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>118872</td>
+                <td>-11887211</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+
+      <div class="div">
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font margin0">
+            <span class="span1 bold">周度业绩目标</span>
+            <span class="span2 boxx">
+              <span class="s1"></span>
+              <span>目标</span>
+              <span class="s2"></span>
+              <span>已完成</span>
+            </span>
+          </div>
+          <div class="chartcla" id="week" style="width: 482px;height:370px;"></div>
+        </div>
+      </div>
+      <div class="div">
+          <i class="i1"></i>
+          <i class="i2"></i>
+          <i class="i3"></i>
+          <i class="i4"></i>
+          <div class="box">
+            <div class="font margin0">
+              <span class="span1 bold">月度业绩目标</span>
+              <span class="span2 boxx">
+                <span class="s1"></span>
+                <span>目标</span>
+                <span class="s2"></span>
+                <span>已完成</span>
+              </span>
+            </div>
+            <div class="chartcla" id="month" style="width: 482px;height:370px;"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="./script/echarts.min.js"></script>
+  <script>
+    $(function () {
+      var myChart = echarts.init(document.getElementById('main'));
+      var difference = echarts.init(document.getElementById('difference'));
+      var education = echarts.init(document.getElementById('education'));
+      var career = echarts.init(document.getElementById('career'));
+      var week = echarts.init(document.getElementById('week'));
+      var month = echarts.init(document.getElementById('month'));
+      option1 = {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross',
+            label: {
+              backgroundColor: '#6a7985'
+            }
+          }
+        },
+        toolbox: {
+          feature: {
+            saveAsImage: {}
+          }
+        },
+        xAxis: [{
+          type: 'category',
+          boundaryGap: false,
+          data: ['9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']
+        }],
+        yAxis: [{
+          type: 'value'
+        }],
+        series: [{
+            name: '昨日',
+            type: 'line',
+            areaStyle: {
+              color: {
+                type: 'linear',
+                x: 0,
+                y: 0,
+                x2: 0,
+                y2: 1,
+                colorStops: [{
+                    offset: 0,
+                    color: '#1dcaf8'
+                  },
+                  {
+                    offset: 1,
+                    color: '#cdeff8cc'
+                  }
+                ],
+                global: false
+              }
+            },
+            lineStyle: {
+              color: '#0F76D8'
+            },
+            data: [120, 140, 160, 180, 160, 200, 120, 150, 210, 140, 160, 180, 110, 140]
+          },
+          {
+            name: '今日',
+            type: 'line',
+            lineStyle: {
+              color: '#EC3E3B'
+            },
+            data: [20, 40, 60, 80, 60, 140, 20, 50, 20, 40, 60, 80, 60, 40]
+          }
+        ]
+      };
+
+
+      option2 = {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
+        },
+        xAxis: [{
+          type: 'value'
+        }],
+        yAxis: [{
+          type: 'category',
+          axisTick: {
+            show: false
+          },
+          data: ['营养', '学历', '心里', '其他', '人力']
+        }],
+        series: [{
+          type: 'bar',
+          barwidth: 20,
+          itemStyle: {
+            color: {
+              type: 'linear',
+              x: 0,
+              y: 0,
+              x2: 1,
+              y2: 0,
+              colorStops: [{
+                offset: 0,
+                color: '#2c2cfd' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: '#81f6f2' // 100% 处的颜色
+              }],
+              global: false // 缺省为 false
+            }
+          },
+          label: {
+            normal: {
+              show: true,
+              position: 'inside'
+            }
+          },
+          data: [-300, -170, -40, 214, 100]
+        }]
+      };
+
+      option3 = {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross',
+            label: {
+              backgroundColor: '#6a7985'
+            }
+          }
+        },
+        toolbox: {
+          feature: {
+            saveAsImage: {}
+          }
+        },
+        xAxis: [{
+          type: 'category',
+          boundaryGap: false,
+          data: ['9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']
+        }],
+        yAxis: [{
+          type: 'value'
+        }],
+        series: [{
+            name: '昨日',
+            type: 'line',
+            areaStyle: {
+              color: {
+                type: 'linear',
+                x: 0,
+                y: 0,
+                x2: 0,
+                y2: 1,
+                colorStops: [{
+                    offset: 0,
+                    color: '#1dcaf8'
+                  },
+                  {
+                    offset: 1,
+                    color: '#cdeff8cc'
+                  }
+                ],
+                global: false
+              }
+            },
+            lineStyle: {
+              color: '#0F76D8'
+            },
+            data: [120, 140, 160, 180, 160, 200, 120, 150, 210, 140, 160, 180, 110, 140]
+          },
+          {
+            name: '今日',
+            type: 'line',
+            lineStyle: {
+              color: '#EC3E3B'
+            },
+            data: [20, 40, 60, 80, 60, 140, 20, 50, 20, 40, 60, 80, 60, 40]
+          }
+        ]
+      };
+
+      option4 = {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross',
+            label: {
+              backgroundColor: '#6a7985'
+            }
+          }
+        },
+        toolbox: {
+          feature: {
+            saveAsImage: {}
+          }
+        },
+        xAxis: [{
+          type: 'category',
+          boundaryGap: false,
+          data: ['9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']
+        }],
+        yAxis: [{
+          type: 'value'
+        }],
+        series: [{
+            name: '昨日',
+            type: 'line',
+            areaStyle: {
+              color: {
+                type: 'linear',
+                x: 0,
+                y: 0,
+                x2: 0,
+                y2: 1,
+                colorStops: [{
+                    offset: 0,
+                    color: '#1dcaf8'
+                  },
+                  {
+                    offset: 1,
+                    color: '#cdeff8cc'
+                  }
+                ],
+                global: false
+              }
+            },
+            lineStyle: {
+              color: '#0F76D8'
+            },
+            data: [120, 140, 160, 180, 160, 200, 120, 150, 210, 140, 160, 180, 110, 140]
+          },
+          {
+            name: '今日',
+            type: 'line',
+            lineStyle: {
+              color: '#EC3E3B'
+            },
+            data: [20, 40, 60, 80, 60, 140, 20, 50, 20, 40, 60, 80, 60, 40]
+          }
+        ]
+      };
+
+      option5 = {
+        color: ['#e4393c', '#35b0fa'],
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+        grid: {
+          left: '3%',
+          bottom: '3%',
+          containLabel: true
+        },
+        calculable: true,
+        yAxis: [{
+          type: 'category',
+          axisTick: {
+            show: false
+          },
+          data: [ '王建强凌云','边剑刚', '王建强战狼','房进','王振忠','熊明静']
+        }],
+        xAxis: [{
+          type: 'value'
+        }],
+        series: [{
+            name: '目标',
+            type: 'bar',
+            data: [320, 332, 601, 334, 390, 300]
+          },
+          {
+            name: '已完成',
+            type: 'bar',
+            data: [220, 182, 491, 234, 290, 100]
+          }
+        ]
+      };
+      option6 = {
+        color: ['#e4393c', '#35b0fa'],
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+        grid: {
+          left: '3%',
+          bottom: '3%',
+          containLabel: true
+        },
+        calculable: true,
+        yAxis: [{
+          type: 'category',
+          axisTick: {
+            show: false
+          },
+          data: [ '王建强凌云','边剑刚', '王建强战狼','房进','王振忠','熊明静']
+        }],
+        xAxis: [{
+          type: 'value'
+        }],
+        series: [{
+            name: '目标',
+            type: 'bar',
+            data: [320, 332, 601, 334, 390, 300]
+          },
+          {
+            name: '已完成',
+            type: 'bar',
+            data: [220, 182, 491, 234, 290, 100]
+          }
+        ]
+      };
+
+
+
+
+
+
+
+      myChart.setOption(option1);
+      difference.setOption(option2);
+      education.setOption(option3);
+      career.setOption(option4);
+      week.setOption(option5);
+      month.setOption(option6);
+    })
+  </script>
+</body>
+
+</html>

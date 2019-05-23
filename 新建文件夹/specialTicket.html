@@ -100,6 +100,10 @@
           <td colspan="5" class="inputTd"><input class="input" type="text"></td>
         </tr>
         <tr>
+          <td class="td">学员电话<span>*</span></td>
+          <td colspan="5" class="inputTd"><input class="input" type="text"></td>
+        </tr>
+        <tr>
           <td class="td">收件信息<span>*</span></td>
           <td colspan="5" class="inputTd"><input class="input" type="text"></td>
         </tr>
@@ -238,6 +242,7 @@
         var arr1 = [
           '填写申请金额',
           '填写学员姓名',
+          '填写学员电话',
           '填写收件信息',
           '填写公司电话',
           '填写公司地址',
@@ -273,9 +278,7 @@
             var str = ''
             for (var i = 0; i < arr.length; i++) {
               str += "<li>" +
-                     "<img src='./images/ic_caution.png'>" +
-                      arr2[arr[i]] + 
-                     "</li>"
+                     "<img src='./images/ic_caution.png'>" + arr2[arr[i]] + "</li>"
             }
             $('.err .error2').html(str)
           } else {
