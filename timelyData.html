@@ -380,23 +380,23 @@
         </div>
       </div>
       <div class="div">
-          <i class="i1"></i>
-          <i class="i2"></i>
-          <i class="i3"></i>
-          <i class="i4"></i>
-          <div class="box">
-            <div class="font margin0">
-              <span class="span1 bold">月度业绩目标</span>
-              <span class="span2 boxx">
-                <span class="s1"></span>
-                <span>目标</span>
-                <span class="s2"></span>
-                <span>已完成</span>
-              </span>
-            </div>
-            <div class="chartcla" id="month" style="width: 482px;height:370px;"></div>
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font margin0">
+            <span class="span1 bold">月度业绩目标</span>
+            <span class="span2 boxx">
+              <span class="s1"></span>
+              <span>目标</span>
+              <span class="s2"></span>
+              <span>已完成</span>
+            </span>
           </div>
+          <div class="chartcla" id="month" style="width: 482px;height:370px;"></div>
         </div>
+      </div>
     </div>
   </div>
   <script src="./script/echarts.min.js"></script>
@@ -489,7 +489,8 @@
         }],
         series: [{
           type: 'bar',
-          barwidth: 20,
+          barGap: 0,
+          barCategoryGap: 20,
           itemStyle: {
             color: {
               type: 'linear',
@@ -658,7 +659,7 @@
           axisTick: {
             show: false
           },
-          data: [ '王建强凌云','边剑刚', '王建强战狼','房进','王振忠','熊明静']
+          data: ['王建强凌云', '边剑刚', '王建强战狼', '房进', '王振忠', '熊明静']
         }],
         xAxis: [{
           type: 'value'
@@ -666,11 +667,15 @@
         series: [{
             name: '目标',
             type: 'bar',
+            barGap: 0,
+            barCategoryGap: 20,
             data: [320, 332, 601, 334, 390, 300]
           },
           {
             name: '已完成',
             type: 'bar',
+            barGap: 0,
+            barCategoryGap: 20,
             data: [220, 182, 491, 234, 290, 100]
           }
         ]
@@ -694,7 +699,7 @@
           axisTick: {
             show: false
           },
-          data: [ '王建强凌云','边剑刚', '王建强战狼','房进','王振忠','熊明静']
+          data: ['王建强凌云', '边剑刚', '王建强战狼', '房进', '王振忠', '熊明静']
         }],
         xAxis: [{
           type: 'value'
@@ -702,11 +707,15 @@
         series: [{
             name: '目标',
             type: 'bar',
+            barGap: 0,
+            barCategoryGap: 20,
             data: [320, 332, 601, 334, 390, 300]
           },
           {
             name: '已完成',
             type: 'bar',
+            barGap: 0,
+            barCategoryGap: 20,
             data: [220, 182, 491, 234, 290, 100]
           }
         ]
