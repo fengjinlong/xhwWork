@@ -370,9 +370,9 @@
           <div class="font margin0">
             <span class="span1 bold">周度业绩目标</span>
             <span class="span2 boxx">
-              <span class="s1"></span>
-              <span>目标</span>
               <span class="s2"></span>
+              <span>目标</span>
+              <span class="s1"></span>
               <span>已完成</span>
             </span>
           </div>
@@ -388,9 +388,9 @@
           <div class="font margin0">
             <span class="span1 bold">月度业绩目标</span>
             <span class="span2 boxx">
-              <span class="s1"></span>
-              <span>目标</span>
               <span class="s2"></span>
+              <span>目标</span>
+              <span class="s1"></span>
               <span>已完成</span>
             </span>
           </div>
@@ -447,7 +447,7 @@
                   },
                   {
                     offset: 1,
-                    color: '#cdeff8cc'
+                    color: '#fff'
                   }
                 ],
                 global: false
@@ -500,10 +500,10 @@
               y2: 0,
               colorStops: [{
                 offset: 0,
-                color: '#2c2cfd' // 0% 处的颜色
+                color: '#04a49d' // 0% 处的颜色
               }, {
                 offset: 1,
-                color: '#81f6f2' // 100% 处的颜色
+                color: '#acf2f2' // 100% 处的颜色
               }],
               global: false // 缺省为 false
             }
@@ -557,7 +557,7 @@
                   },
                   {
                     offset: 1,
-                    color: '#cdeff8cc'
+                    color: '#fff'
                   }
                 ],
                 global: false
@@ -618,7 +618,7 @@
                   },
                   {
                     offset: 1,
-                    color: '#cdeff8cc'
+                    color: '#fff'
                   }
                 ],
                 global: false
@@ -641,7 +641,7 @@
       };
 
       option5 = {
-        color: ['#e4393c', '#35b0fa'],
+        color: ['#35b0fa', '#e4393c'],
         tooltip: {
           trigger: 'axis',
           axisPointer: {
@@ -669,6 +669,23 @@
             type: 'bar',
             barGap: 0,
             barCategoryGap: 20,
+            itemStyle: {
+              color: {
+                type: 'linear',
+                x: 0,
+                y: 0,
+                x2: 1,
+                y2: 0,
+                colorStops: [{
+                  offset: 0,
+                  color: '#4cc5fc' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#0498dc' // 100% 处的颜色
+                }],
+                global: false // 缺省为 false
+              }
+            },
             data: [320, 332, 601, 334, 390, 300]
           },
           {
@@ -676,12 +693,29 @@
             type: 'bar',
             barGap: 0,
             barCategoryGap: 20,
+            itemStyle: {
+              color: {
+                type: 'linear',
+                x: 0,
+                y: 0,
+                x2: 1,
+                y2: 0,
+                colorStops: [{
+                  offset: 0,
+                  color: '#f67a7d' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#ec0409' // 100% 处的颜色
+                }],
+                global: false // 缺省为 false
+              }
+            },
             data: [220, 182, 491, 234, 290, 100]
           }
         ]
       };
       option6 = {
-        color: ['#e4393c', '#35b0fa'],
+        color: ['#35b0fa', '#e4393c'],
         tooltip: {
           trigger: 'axis',
           axisPointer: {
@@ -709,15 +743,50 @@
             type: 'bar',
             barGap: 0,
             barCategoryGap: 20,
-            data: [320, 332, 601, 334, 390, 300]
+            data: [320, 332, 601, 334, 390, 300],
+            itemStyle: {
+              color: {
+                type: 'linear',
+                x: 0,
+                y: 0,
+                x2: 1,
+                y2: 0,
+                colorStops: [{
+                  offset: 0,
+                  color: '#4cc5fc' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#0498dc' // 100% 处的颜色
+                }],
+                global: false // 缺省为 false
+              }
+            }
           },
           {
             name: '已完成',
             type: 'bar',
             barGap: 0,
             barCategoryGap: 20,
-            data: [220, 182, 491, 234, 290, 100]
-          }
+            data: [220, 182, 491, 234, 290, 100],
+            itemStyle: {
+              color: {
+                type: 'linear',
+                x: 0,
+                y: 0,
+                x2: 1,
+                y2: 0,
+                colorStops: [{
+                  offset: 0,
+                  color: '#f67a7d' // 0% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#ec0409' // 100% 处的颜色
+                }],
+                global: false // 缺省为 false
+              }
+            }
+          },
+          // }
         ]
       };
 
