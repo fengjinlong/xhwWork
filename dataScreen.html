@@ -205,6 +205,59 @@
         </div>
       </div>
     </div>
+    <div class="chart">
+      <div class="two twoo">
+        <div class="header1">月度业绩排名TOP5</div>
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="lists">
+          <div class="list">
+            <span class="span span1"></span>
+            <span class="date">2018-12-12</span>
+            <span class="mon f">280.13</span>
+          </div>
+          <div class="list">
+            <span class="span span2"></span>
+            <span class="date">2018-12-12</span>
+            <span class="mon f">280.13</span>
+          </div>
+          <div class="list">
+            <span class="span span3"></span>
+            <span class="date">2018-12-12</span>
+            <span class="mon f">280.13</span>
+          </div>
+          <div class="list">
+            <span class="span">NO.4</span>
+            <span class="date">2018-12-12</span>
+            <span class="mon">280.13</span>
+          </div>
+          <div class="list">
+            <span class="span">NO.5</span>
+            <span class="date">2018-12-12</span>
+            <span class="mon">280.13</span>
+          </div>
+        </div>
+      </div>
+      <div class="other">
+        <div class="money">（万元）</div>
+        <i class="i1"></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <div class="box">
+          <div class="font margin0">
+            <span class="span1 bold">月度业绩数据</span>
+          </div>
+          <div class="chartcla" id="monthTwo" style="width: 420px;height:300px;"></div>
+          <div class="cirBox">
+            <div class="chartcla" id="monthThree" style="width: 380px;height:350px;"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
   <script src="./script/echarts.min.js"></script>
   <script>
@@ -213,15 +266,15 @@
 
       var data1 = {
         value: 50, //汇总
-        color: '#FF543C',
+        color: '#54c7ec',
       };
       var data2 = {
-        value: 0, //质量
-        color: '#3E88F0',
+        value: 30, //质量
+        color: '#54c7ec',
       };
       var data3 = {
         value: 50, //环保
-        color: '#2FD574',
+        color: '#54c7ec',
       };
 
       var value1 = data1.value || 0;
@@ -412,16 +465,16 @@
       var myChart2 = echarts.init(document.getElementById('main2'));
 
       var data4 = {
-        value: 0, //汇总
-        color: '#FF543C',
+        value: 70, //汇总
+        color: '#54c7ec',
       };
       var data5 = {
-        value: 25, //质量
-        color: '#3E88F0',
+        value: 65, //质量
+        color: '#54c7ec',
       };
       var data6 = {
-        value: 25, //环保
-        color: '#2FD574',
+        value: 85, //环保
+        color: '#54c7ec',
       };
       var value4 = data4.value || 0;
       var value5 = data5.value || 0;
@@ -610,11 +663,11 @@
 
       var data7 = {
         value: 100, //汇总
-        color: '#FF543C',
+        color: '#54c7ec',
       };
       var data8 = {
-        value: 100, //质量
-        color: '#3E88F0',
+        value: 90, //质量
+        color: '#54c7ec',
       };
       var value7 = data7.value || 0;
       var value8 = data8.value || 0;
@@ -811,7 +864,7 @@
 
       var month = echarts.init(document.getElementById('month'));
       option6 = {
-        color: [ '#35b0fa', '#e4393c'],
+        color: ['#35b0fa', '#e4393c'],
         // color: [ '#e4393c', '#35b0fa'],
         tooltip: {
           trigger: 'axis',
@@ -853,6 +906,138 @@
       };
 
       month.setOption(option6);
+
+      var monthTwo = echarts.init(document.getElementById('monthTwo'));
+      option7 = {
+        color: ['#35b0fa', '#e4393c', '#35b0fa', '#e4393c', '#35b0fa', '#e4393c'],
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+        grid: {
+          left: '2%',
+          bottom: '10%',
+          containLabel: true
+        },
+        calculable: true,
+        yAxis: [{
+          type: 'category',
+          axisTick: {
+            show: false
+          },
+          data: ['06其他', '05教师', '04心理', '03学历', '02营养', '01人力']
+        }],
+        xAxis: [{
+          type: 'value'
+        }],
+        series: [{
+          name: '业绩',
+          type: 'bar',
+          barWidth: 16,
+          itemStyle: {
+            //通常情况下：
+            normal: {
+              color: function (params) {
+                var colorList = [
+                  '#E8E8E8 ',
+                  '#86C141',
+                  '#0560EE',
+                  '#F38D1F',
+                  '#0D87E0',
+                  '#EC3E3B'
+                ];
+                return colorList[params.dataIndex];
+              }
+            }
+          },
+          data: [120, 332, 71, 20, 332, 561]
+        }]
+      };
+
+      monthTwo.setOption(option7);
+
+
+
+      var monthThree = echarts.init(document.getElementById('monthThree'));
+      option8 = {
+        tooltip: {
+          trigger: 'item',
+          formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        // legend: {
+        //   orient: 'vertical',
+        //   x: 'left',
+        //   data: ['06其他', '05教师', '04心理', '03学历', '02营养', '01人力']
+        // },
+        series: [{
+          name: '月度业绩数据',
+          type: 'pie',
+          radius: ['65', '75'],
+          center: ['52%', '52%'],
+          itemStyle: {
+            //通常情况下：
+            normal: {
+              color: function (params) {
+                var colorList = [
+                  '#EC3E3B',
+                  '#0D87E0',
+                  '#F38D1F',
+                  '#0560EE',
+                  '#86C141',
+                  '#E8E8E8'
+                ];
+                return colorList[params.dataIndex];
+              }
+            }
+          },
+          avoidLabelOverlap: false,
+          label: {
+            normal: {
+              show: false,
+              // position: 'center'
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                fontSize: '20'
+              }
+            }
+          },
+          labelLine: {
+            normal: {
+              show: false
+            }
+          },
+          data: [{
+              value: 561,
+              name: '01人力'
+            },
+            {
+              value: 332,
+              name: '02营养'
+            },
+            {
+              value: 20,
+              name: '03学历'
+            },
+            {
+              value: 71,
+              name: '04心理'
+            },
+            {
+              value: 332,
+              name: '05教师'
+            },
+            {
+              value: 120,
+              name: '06其他'
+            },
+          ]
+        }]
+      };
+      monthThree.setOption(option8);
     })
   </script>
 </body>

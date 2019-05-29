@@ -1,6 +1,7 @@
 .main {
   width: 1196px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 .main header {
   width: 100%;
@@ -379,6 +380,11 @@
   height: 351px;
   position: relative;
 }
+.main .chart .other .money {
+  position: absolute;
+  right: 280px;
+  bottom: 30px;
+}
 .main .chart .other i {
   display: block;
   width: 47px;
@@ -444,4 +450,11 @@
   width: 10px;
   height: 10px;
   background: #e4393c;
+}
+.main .chart .other .box .cirBox {
+  width: 380px;
+  height: 350px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
