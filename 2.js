@@ -2,9 +2,6 @@ var data7 = {
   value: 0, //汇总
   color: '#FF543C',
 };
-
-
-
 var data8 = {
   value: 25, //质量
   color: '#3E88F0',
